@@ -24,8 +24,8 @@ if ! grep -q "frontend hasbiyallah-frontend" /etc/haproxy/haproxy.cfg; then
 
     backend hasbiyallah-backend
         balance roundrobin
-        server 6310-web-01 3.86.194.153:80 check
-        server 6310-web-02 3.91.200.254:80 check"
+        server 6310-web-01 3.86.110.56:80 check
+        server 6310-web-02 52.204.127.189:80 check"
     
     # Append the configuration to haproxy.cfg
     echo "$server_config" | sudo tee -a /etc/haproxy/haproxy.cfg
