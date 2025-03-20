@@ -4,5 +4,7 @@
 sudo apt-get update -y
 sudo apt-get install -y apache2
 sudo /etc/init.d/apache2 start
+echo "ServerName localhost" > /etc/apache2.conf 
+service apache2 start
 echo "hello Hulborton" | sudo tee -a /var/www/html/index.html
 sudo /etc/init.d/apache2 restart 
